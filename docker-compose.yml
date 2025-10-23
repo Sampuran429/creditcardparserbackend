@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  tabula:
+    build: ./docker/tabula
+    container_name: tabula_container
+    ports:
+      - "8089:8080"
+    volumes:
+      - ./uploads:/work
+    restart: always
+
+
+
+# docker compose build
+# docker compose up -d
+# docker exec -it tabula_container ls /tabula
